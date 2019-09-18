@@ -9,6 +9,8 @@ def runQC(job, cwl_file, cwlFilename, yml_file, ymlFilename,inputFile,input_file
 
     tempDir = job.fileStore.getLocalTempDir()
 
+    #after importing files to global jobStore, it is required to read the global files for them to become visible to the job itself!!
+
     cwl = job.fileStore.readGlobalFile(cwl_file,userPath=os.path.join(tempDir,cwlFilename))
     yml = job.fileStore.readGlobalFile(yml_file,userPath=os.path.join(tempDir,ymlFilename))
 
