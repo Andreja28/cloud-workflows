@@ -16,10 +16,28 @@ After building the image the workflow is run with the following command:
 python main.py file:my-file-store
 ```
 
+Output dir is se to cwlFiles
+
 ## toil/import_cwl
-Example imprting the cwl workflow in a toil script
+Example importing the cwl workflow in a toil script
 
-* Provide the required inputs for the cwl and export the outputs to the
+* Provide the required inputs for the cwl
+* Run the cwl workflow and get the outputs
+* Export the outputs from the toil fileStore
+
+Before running the workflow it is required to build docker image(the tag should be andra28/snpeff) with the Dockerfile provided in the folder.
+
+The input for the cwl workflow is provided in cwlFiles dir (chr22.truncated.nosamples.1kg.vcf.gz)
+```
+docker build --tag=andra28/snpeff .
+```
+After building the image the workflow is run with the following command:
+```
+python toil_wf.py file:my-file-store
+```
+
+Output dir is se to cwlFiles
+```
 
 
-**Note: after running a workflow the folder toilWorkflowRun will be created. If you want to run the workflow again delete the folder or change the run options in the main function from _options.clean = "never"_ to _options.clean = "always"_ (automatically delete folder after completion)**
+**Note: after running a workflow the folder toilWorkflowRun will be created. If you want to run the workflow again delete the folder or change the run options in the main function from `_options.clean = "never"_ to _options.clean = "always"_` (automatically delete folder after completion)**
