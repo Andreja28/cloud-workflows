@@ -1,1 +1,17 @@
 # cloud-workflows
+
+## toil/another-cwl
+
+The task is to create a toil workflow which consists of a HPC job, and some other cwl workflow that is imported in a toil script. Cwl workflow is executing docker container. The workflow in this example is as follows:
+
+* A hpc job is executed using pakrunner like in **toil/pakRunner** and as a result a .zip file is returned
+* .zip file should be pipelined to the job executing the cwl workflow. Cwl is consisted only of a single step(for the example purposes), a docker container that is extracting the .zip, and returning the extrated files
+
+Before running the workflow it is required to build docker image(the tag should be andra28/unpack) with the Dockerfile provided in the folder.
+```
+docker build --tag=andra28/unpack .
+```
+After building the image the workflow is run with the following command:
+```
+python main.py file:my-file-store
+```
