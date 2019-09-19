@@ -15,3 +15,11 @@ After building the image the workflow is run with the following command:
 ```
 python main.py file:my-file-store
 ```
+
+## toil/import_cwl
+Example imprting the cwl workflow in a toil script
+
+* Provide the required inputs for the cwl and export the outputs to the
+
+
+**Note: after running a workflow the folder toilWorkflowRun will be created. If you want to run the workflow again delete the folder or change the run options in the main function from _options.clean = "never"_ to _options.clean = "always"_ (automatically delete folder after completion)**
