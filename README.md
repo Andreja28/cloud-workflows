@@ -1,5 +1,16 @@
 # cloud-workflows
 
+## toil/pakRunner
+
+The task is to create a workflow executing a HPC job.
+This feature is implemented using [pak runner](https://github.com/imilos/pakrunner) and wraping it in a toil service.
+
+The workflow is run with the following command:
+
+```
+python main.py file:my-file-store
+```
+
 ## toil/another-cwl
 
 The task is to create a toil workflow which consists of a HPC job, and some other cwl workflow that is imported in a toil script. Cwl workflow is executing docker container. The workflow in this example is as follows:
@@ -36,7 +47,7 @@ After building the image the workflow is run with the following command:
 python toil_wf.py file:my-file-store
 ```
 
-Output dir is se to cwlFiles
+Output dir is set to cwlFiles.
 
 
 **Note:** after running a workflow the folder toilWorkflowRun will be created. If you want to run the workflow again delete the folder or change the run options in the main function from **`_options.clean = "never"_ to _options.clean = "always"`** (automatically delete folder after completion)
