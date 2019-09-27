@@ -15,7 +15,7 @@ def pak(job, pakRunner):
 
         if res.status_code == 200:
             #get results
-            res = requests.post(pakRunner.getResultsEndpoint(), headers = {'Content-Type': 'application/json'}, data='{"guid":"2222-3333", "files":["proba.sh","shorttask.log"]}')
+            res = requests.post(pakRunner.getResultsEndpoint(), headers = {'Content-Type': 'application/json'}, data='{"guid":"4444-1111", "files":["proba.sh","shorttask.log"]}')
 
             if res.status_code == 200:
                 if res.headers.get('Content-Disposition'):
