@@ -5,6 +5,13 @@
 The task is to create a workflow executing a HPC job.
 This feature is implemented using [pak runner](https://github.com/imilos/pakrunner) and wraping it in a toil service.
 
+A job using pak runner service has several steps:
+
+* Creating a hpc job
+* Starting previously created hpc job
+* Waiting for results 
+* Returning .zip file containing requested output files
+
 The workflow is run with the following command:
 
 ```
