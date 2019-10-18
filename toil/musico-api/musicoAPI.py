@@ -1,7 +1,7 @@
 class MusicoAPI(object):
 
     def __init__(self):
-        self.API = "http://medflow.bioirc.ac.rs:3000/api/calcs"
+        self.API = "hostname/api/calcs"
 
 
     def createCalcs(self):
