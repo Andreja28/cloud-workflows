@@ -6,12 +6,10 @@ import requests, os, json, time
 
 
 def musico(job, unitFilenames, units,out_dir, musicoAPI):
-    filenames = []
-    for unit in units:
-        filenames.append(unit.split("/")[-1])
+
     data = json.dumps({
         "apiUser": True,
-        "calcs": filenames
+        "calcs": unitFilenames
     })
     job.fileStore.logToMaster(data)
     #create
@@ -27,27 +25,23 @@ def musico(job, unitFilenames, units,out_dir, musicoAPI):
             tempDir = job.fileStore.getLocalTempDir()
              
             for unit in units:
-                u = job.fileStore.readGlobalFile(unit, userPath=os.path.join(tempDir,filenames[units.index(unit)]))
-                job.fileStore.logToMaster(u)
+                u = job.fileStore.readGlobalFile(unit, userPath=os.path.join(tempDir,unitFilenames[units.index(unit)]))
+                
                 files.append(open(u,'rb'))
             res = requests.post(musicoAPI.uploadCalcs(), files={"zipFile[]":files[0]})
             #job.fileStore.logToMaster(res.status_code)
-            job.fileStore.logToMaster(res.text)
+            #job.fileStore.logToMaster(res.text)
             if (res.status_code== 200):
                 resJson = json.loads(res.text)
-                job.fileStore.logToMaster(res.text)
                 if (resJson['success'] and resJson['upload']=='OK'):
                     data = json.dumps({
                         "apiUser": True,
                         "calcIds": calcIds
                     })
-                    job.fileStore.logToMaster("RUUUUUUN")
-                    job.fileStore.logToMaster(data)
                     res = requests.post(musicoAPI.runCalcs(), headers={"Content-Type":"application/json"}, data=data)
-                    job.fileStore.logToMaster(res.text)
+                    #job.fileStore.logToMaster(res.text)
                     flag = True
                     while (flag):
-                        job.fileStore.logToMaster("Provera")
                         time.sleep(1)
                         flag = False
                         for calcId in calcIds:
@@ -73,7 +67,7 @@ def musico(job, unitFilenames, units,out_dir, musicoAPI):
                         res = requests.post(musicoAPI.downloadCalc(), headers={"Content-Type":"application/json"}, data=data)
                         out = job.fileStore.getLocalTempFile()
                         open(out,'wb').write(res.content)
-                        job.fileStore.logToMaster(out)
+                        #job.fileStore.logToMaster(out)
                         output1_file = job.fileStore.writeGlobalFile(out)
                         job.fileStore.readGlobalFile(output1_file,userPath=os.path.join(out_dir,unitFilenames[calcIds.index(calc)]))
 

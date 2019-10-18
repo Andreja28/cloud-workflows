@@ -56,5 +56,18 @@ python toil_wf.py file:my-file-store
 
 Output dir is set to cwlFiles.
 
+# toil/musico-api
+
+Example executing MUSICO service in a toil script.
+
+A job is created executing given MUSICO computations. Inputs into the job are filename of a *.zip* file containing the calculation, *FileId* of the provided file, output dir for the results and service providing **MUSICO API**
+
+Only a single *.zip* file can be passed to the job for it to run successfully.
+
+Workflow can be run with the following command:
+```
+python main.py file:my-file-store
+```
+
 
 **Note:** after running a workflow the folder toilWorkflowRun will be created. If you want to run the workflow again delete the folder or change the run options in the main function from **`_options.clean = "never"_ to _options.clean = "always"`** (automatically delete folder after completion)
