@@ -15,7 +15,7 @@ if __name__=="__main__":
     j4 = Job.wrapJobFn(helloWorld, "last")
 
     
-    j1.addChild(j2)
+    j1.addChild(j2) #j1.addChildJobFn(helloWorld, "second or third")
     j1.addChild(j3)
     j1.addFollowOn(j4)
 

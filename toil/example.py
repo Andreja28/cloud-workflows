@@ -8,7 +8,7 @@ def helloWorld(job,message, memory="1G", cores=1, disk="1G"):
 if __name__=="__main__":
     options = Job.Runner.getDefaultOptions("./toilWorkflowRun")
     options.logLevel = "INFO"
-    options.clean = "never"
+    options.clean = "always"
 
     with Toil(options) as toil:
         output = toil.start(Job.wrapJobFn(helloWorld, "You did it!"))

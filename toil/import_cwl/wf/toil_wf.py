@@ -50,4 +50,4 @@ if __name__=="__main__":
 
         job = Job.wrapJobFn(runQC, cwl_file, cwlFilename, yml_file, ymlFilename,inputFile, input_file,in_out_dir)
 
-        toil.start(job)
+        fajl1, fajl2 = toil.start(job)
