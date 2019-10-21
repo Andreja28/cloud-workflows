@@ -1,11 +1,12 @@
 from musicoService import MusicoService
+from zipfile import ZipFile
 
 from toil.common import Toil
 from toil.job import Job
 import requests, os, json, time
 
 
-def musico(job, unitFilenames, units,out_dir, musicoAPI):
+def musico(job, unitFilenames, units, musicoAPI):
 
     data = json.dumps({
         "apiUser": True,
@@ -69,21 +70,25 @@ def musico(job, unitFilenames, units,out_dir, musicoAPI):
                         open(out,'wb').write(res.content)
                         #job.fileStore.logToMaster(out)
                         output1_file = job.fileStore.writeGlobalFile(out)
-                        job.fileStore.readGlobalFile(output1_file,userPath=os.path.join(out_dir,unitFilenames[calcIds.index(calc)]))
+                        return output1_file
+                        #job.fileStore.readGlobalFile(output1_file,userPath=os.path.join(out_dir,unitFilenames[calcIds.index(calc)]))
 
 
-
-
-
-
+def unzipJob(job, zipID, out_dir):
+    job.fileStore.logToMaster(zipID)
+    tempDir = job.fileStore.getLocalTempDir()
+    zf = ZipFile(job.fileStore.readGlobalFile(zipID),'r')
+    zf.extractall(out_dir)
+    zf.close()
 
     
 def rootJobFunc(job,unitFilenames, units,out_dir, service):
     musicoServ = job.addService(service)
-    return job.addChildJobFn(musico, unitFilenames, units,out_dir, musicoServ).rv()
+    musicoJob = Job.wrapJobFn(musico, unitFilenames, units, musicoServ)
+    unzip = Job.wrapJobFn(unzipJob, musicoJob.rv(), out_dir)
+    job.addChild(musicoJob)
+    musicoJob.addChild(unzip)
    
-
-
 
 if __name__=="__main__":
     options = Job.Runner.getDefaultOptions("./toilWorkflowRun")
@@ -100,7 +105,6 @@ if __name__=="__main__":
     
         service = MusicoService()
         rootJob = Job.wrapJobFn(rootJobFunc, unitFilenames, units, out_dir, service)
-
-    
+        
         output = toil.start(rootJob)
         print(output)
