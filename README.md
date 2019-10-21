@@ -71,5 +71,7 @@ Workflow can be run with the following command:
 python main.py file:my-file-store
 ```
 
+Results of the musico calculation will be stored in the `results` folder. 
+
 
 **Note:** after running a workflow the folder toilWorkflowRun will be created. If you want to run the workflow again delete the folder or change the run options in the main function from **`_options.clean = "never"_ to _options.clean = "always"`** (automatically delete folder after completion)
