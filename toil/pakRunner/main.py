@@ -2,10 +2,10 @@ from pakRunnerService import PakRunnerService
 
 from toil.common import Toil
 from toil.job import Job
-import requests
+import requests, os
 
 
-def pak(job, pakRunner):
+def pak(job, out_dir, pakRunner):
 
     #create a job
     res = requests.post(pakRunner.createTaskEndpoint(), headers={"Content-Type":"application/json"}, data='{"guid":"4444-1111"}')
@@ -25,6 +25,8 @@ def pak(job, pakRunner):
                         resFile.write(res.content)
 
                     fileID = job.fileStore.writeGlobalFile(f)
+                    results = job.fileStore.readGlobalFile(fileID, userPath=os.path.join(out_dir,"results.zip"))
+
 
                     return fileID              
 
@@ -40,14 +42,16 @@ def pak(job, pakRunner):
         return "Cannot create task, status code: "+ res.status_code
 
 
-def rootJobFunc(job, service):
+def rootJobFunc(job,out_dir, service):
     pakService = job.addService(service)
-    return job.addChildJobFn(pak, pakService).rv()
+    return job.addChildJobFn(pak, out_dir, pakService).rv()
    
+
+out_dir = os.path.dirname(os.path.abspath(__file__))
 
 
 pakService = PakRunnerService()
-rootJob = Job.wrapJobFn(rootJobFunc, pakService)
+rootJob = Job.wrapJobFn(rootJobFunc, out_dir, pakService)
 
 if __name__=="__main__":
     options = Job.Runner.getDefaultOptions("./toilWorkflowRun")
