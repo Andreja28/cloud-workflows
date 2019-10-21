@@ -62,6 +62,8 @@ Example executing MUSICO service in a toil script.
 
 A job is created executing given MUSICO computations. Inputs into the job are filename of a *.zip* file containing the calculation, *FileId* of the provided file, output dir for the results and service providing **MUSICO API**
 
+Replace corresponding `$HOST` and `$PORT` in `musicoAPI.py` with the hostname and port providing **MusicoAPI**
+
 Only a single *.zip* file can be passed to the job for it to run successfully.
 
 Workflow can be run with the following command:

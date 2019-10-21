@@ -1,7 +1,8 @@
 class MusicoAPI(object):
 
     def __init__(self):
-        self.API = "hostname/api/calcs"
+        #replace $HOST and $PORT with corresponding data
+        self.API = "$HOST:$PORT/api/calcs"
 
 
     def createCalcs(self):
