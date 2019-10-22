@@ -56,7 +56,7 @@ python toil_wf.py file:my-file-store
 
 Output dir is set to cwlFiles.
 
-# toil/musico-api
+## toil/musico-api
 
 Example executing MUSICO service in a toil script.
 
