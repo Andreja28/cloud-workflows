@@ -2,7 +2,7 @@ from pakRunnerService import PakRunnerService
 
 from toil.common import Toil
 from toil.job import Job
-import requests
+import requests, sys
 import os
 import subprocess
 
@@ -83,9 +83,9 @@ rootJob = Job.wrapJobFn(rootJobFunc, pakService)
 
     
 if __name__=="__main__":
-    options = Job.Runner.getDefaultOptions("./toilWorkflowRun")
+    options = Job.Runner.getDefaultOptions("./"+sys.argv[1])
     options.logLevel = "INFO"
-    options.clean = "never"
+    options.clean = "always"
 
     with Toil(options) as toil:
         in_out_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cwlFiles")

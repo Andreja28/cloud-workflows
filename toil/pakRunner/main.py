@@ -2,7 +2,7 @@ from pakRunnerService import PakRunnerService
 
 from toil.common import Toil
 from toil.job import Job
-import requests, os
+import requests, os, sys
 
 
 def pak(job, out_dir, pakRunner):
@@ -54,9 +54,9 @@ pakService = PakRunnerService()
 rootJob = Job.wrapJobFn(rootJobFunc, out_dir, pakService)
 
 if __name__=="__main__":
-    options = Job.Runner.getDefaultOptions("./toilWorkflowRun")
+    options = Job.Runner.getDefaultOptions("./"+sys.argv[1])
     options.logLevel = "INFO"
-    options.clean = "never"
+    options.clean = "always"
 
     with Toil(options) as toil:
         output = toil.start(rootJob)

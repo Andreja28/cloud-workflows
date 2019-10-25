@@ -1,7 +1,7 @@
 from toil.job import Job
 from toil.common import Toil
 import subprocess
-import os
+import os, sys
 
 
 def runQC(job, cwl_file, cwlFilename, yml_file, ymlFilename,inputFile,input_file, output_dir):
@@ -29,9 +29,9 @@ def runQC(job, cwl_file, cwlFilename, yml_file, ymlFilename,inputFile,input_file
     return [output1_file,output2_file]
     
 if __name__=="__main__":
-    options = Job.Runner.getDefaultOptions("./toilWorkflowRun")
+    options = Job.Runner.getDefaultOptions("./"+sys.argv[1])
     options.logLevel = "INFO"
-    options.clean = "never"
+    options.clean = "always"
 
     with Toil(options) as toil:
         in_out_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cwlFiles")

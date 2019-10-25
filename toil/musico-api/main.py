@@ -3,7 +3,7 @@ from zipfile import ZipFile
 
 from toil.common import Toil
 from toil.job import Job
-import requests, os, json, time
+import requests, os, json, time, sys
 
 
 def musico(job, unitFilenames, units, musicoAPI):
@@ -91,11 +91,15 @@ def rootJobFunc(job,unitFilenames, units,out_dir, service):
    
 
 if __name__=="__main__":
-    options = Job.Runner.getDefaultOptions("./toilWorkflowRun")
+    options = Job.Runner.getDefaultOptions("./"+sys.argv[1])
     options.logLevel = "INFO"
-    options.clean = "never"
+    options.clean = "always"
     with Toil(options) as toil:
         out_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results")
+
+
+        #ucitam .json
+        #unitfilename = json.unitfilename
 
         #unitFilenames = ["GC1.zip", "GC2.zip"]
         #units = [toil.importFile("file://"+os.path.abspath(unitFilenames[0])), toil.importFile("file://"+os.path.abspath(unitFilenames[1]))]
