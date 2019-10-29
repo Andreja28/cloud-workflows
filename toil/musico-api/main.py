@@ -95,20 +95,12 @@ if __name__=="__main__":
     options.logLevel = "INFO"
     options.clean = "always"
     with Toil(options) as toil:
-        out_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results")
-
-
-        #ucitam .json
-        #unitfilename = json.unitfilename
-
-        #unitFilenames = ["GC1.zip", "GC2.zip"]
-        #units = [toil.importFile("file://"+os.path.abspath(unitFilenames[0])), toil.importFile("file://"+os.path.abspath(unitFilenames[1]))]
         unitFilenames = ["GC11.zip"]
         units = [toil.importFile("file://"+os.path.abspath(unitFilenames[0]))]
 
     
         service = MusicoService()
-        rootJob = Job.wrapJobFn(rootJobFunc, unitFilenames, units, out_dir, service)
+        rootJob = Job.wrapJobFn(rootJobFunc, unitFilenames, units, sys.argv[2], service)
         
         output = toil.start(rootJob)
         print(output)

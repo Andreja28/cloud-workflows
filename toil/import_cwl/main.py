@@ -34,20 +34,20 @@ if __name__=="__main__":
     options.clean = "always"
 
     with Toil(options) as toil:
-        in_out_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cwlFiles")
+        in_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cwlFiles")
         print(in_out_dir)
 
 
         cwlFilename = "workflow.cwl"
-        cwl_file = toil.importFile("file://"+os.path.abspath(os.path.join(in_out_dir,cwlFilename)))
+        cwl_file = toil.importFile("file://"+os.path.abspath(os.path.join(in_dir,cwlFilename)))
 
         ymlFilename = "inputs.yml"
-        yml_file = toil.importFile("file://"+os.path.abspath(os.path.join(in_out_dir, ymlFilename)))
+        yml_file = toil.importFile("file://"+os.path.abspath(os.path.join(in_dir, ymlFilename)))
 
         input_file = "chr22.truncated.nosamples.1kg.vcf.gz"
 
-        inputFile = toil.importFile("file://"+os.path.abspath(os.path.join(in_out_dir, input_file)))
+        inputFile = toil.importFile("file://"+os.path.abspath(os.path.join(in_dir, input_file)))
 
-        job = Job.wrapJobFn(runQC, cwl_file, cwlFilename, yml_file, ymlFilename,inputFile, input_file,in_out_dir)
+        job = Job.wrapJobFn(runQC, cwl_file, cwlFilename, yml_file, ymlFilename,inputFile, input_file, sys.argv[2])
 
         fajl1, fajl2 = toil.start(job)

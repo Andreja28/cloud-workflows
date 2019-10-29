@@ -47,16 +47,14 @@ def rootJobFunc(job,out_dir, service):
     return job.addChildJobFn(pak, out_dir, pakService).rv()
    
 
-out_dir = os.path.dirname(os.path.abspath(__file__))
-
-
-pakService = PakRunnerService()
-rootJob = Job.wrapJobFn(rootJobFunc, out_dir, pakService)
 
 if __name__=="__main__":
     options = Job.Runner.getDefaultOptions("./"+sys.argv[1])
     options.logLevel = "INFO"
     options.clean = "always"
+    
+    pakService = PakRunnerService()
+    rootJob = Job.wrapJobFn(rootJobFunc, sys.argv[2], pakService)
 
     with Toil(options) as toil:
         output = toil.start(rootJob)

@@ -88,13 +88,11 @@ if __name__=="__main__":
     options.clean = "always"
 
     with Toil(options) as toil:
-        in_out_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cwlFiles")
-        print(in_out_dir)
-
-
+        in_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cwlFiles")
+        
         cwlFilename = "workflow.cwl"
-        cwl_file = toil.importFile("file://"+os.path.abspath(os.path.join(in_out_dir,cwlFilename)))
+        cwl_file = toil.importFile("file://"+os.path.abspath(os.path.join(in_dir,cwlFilename)))
 
-        rootJob.addFollowOnJobFn(runQC, cwl_file, cwlFilename,rootJob.rv(),in_out_dir)
+        rootJob.addFollowOnJobFn(runQC, cwl_file, cwlFilename,rootJob.rv(),sys.argv[2])
 
         toil.start(rootJob)
