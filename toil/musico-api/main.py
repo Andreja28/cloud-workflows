@@ -3,7 +3,7 @@ from zipfile import ZipFile
 
 from toil.common import Toil
 from toil.job import Job
-import requests, os, json, time, sys
+import requests, os, json, time, sys, yaml
 
 
 def musico(job, unitFilenames, units, musicoAPI):
@@ -95,12 +95,17 @@ if __name__=="__main__":
     options.logLevel = "INFO"
     options.clean = "always"
     with Toil(options) as toil:
-        unitFilenames = ["GC11.zip"]
-        units = [toil.importFile("file://"+os.path.abspath(unitFilenames[0]))]
+        yamlIn = yaml.load(open(os.path.abspath(os.path.join(sys.argv[2],'inputs.yaml'))), Loader=yaml.FullLoader)
+        
+        unitFilenames = [yamlIn['infile']['path']]
+        print(unitFilenames)
+        #unitFilenames = ["GC11.zip"]
+        units = [toil.importFile("file://"+os.path.abspath(os.path.join(sys.argv[2], unitFilenames[0])))]
 
     
         service = MusicoService()
-        rootJob = Job.wrapJobFn(rootJobFunc, unitFilenames, units, sys.argv[2], service)
+        print()
+        rootJob = Job.wrapJobFn(rootJobFunc, unitFilenames, units, os.path.abspath(sys.argv[3]), service)
         
         output = toil.start(rootJob)
         print(output)
