@@ -91,14 +91,13 @@ def rootJobFunc(job,unitFilenames, units,out_dir, service):
    
 
 if __name__=="__main__":
-    options = Job.Runner.getDefaultOptions("./"+sys.argv[1])
+    options = Job.Runner.getDefaultOptions(sys.argv[1])
     options.logLevel = "INFO"
     options.clean = "always"
     with Toil(options) as toil:
         yamlIn = yaml.load(open(os.path.abspath(os.path.join(sys.argv[2],'inputs.yaml'))), Loader=yaml.FullLoader)
         
         unitFilenames = [yamlIn['infile']['path']]
-        print(unitFilenames)
         #unitFilenames = ["GC11.zip"]
         units = [toil.importFile("file://"+os.path.abspath(os.path.join(sys.argv[2], unitFilenames[0])))]
 
