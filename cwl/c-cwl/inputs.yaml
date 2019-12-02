@@ -1,0 +1,6 @@
+code:
+  class: File
+  path: pi.c
+infile:
+  class: File
+  path: in.txt
