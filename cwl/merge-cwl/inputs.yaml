@@ -1,0 +1,9 @@
+file1:
+    class: File
+    path: file1.txt
+file2:
+    class: File
+    path: file2.txt
+script:
+    class: File
+    path: count-script.sh
