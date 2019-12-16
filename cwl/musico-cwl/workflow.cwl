@@ -4,7 +4,7 @@ baseCommand: []
 
 requirements:
   - class: DockerRequirement
-    dockerPull: andra28/musico
+    dockerPull: andra28/musico:latest
 
 inputs:
     input-zip:
