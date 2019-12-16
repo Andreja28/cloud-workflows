@@ -1,0 +1,3 @@
+input-zip:
+    class: File
+    path: GC11.zip
