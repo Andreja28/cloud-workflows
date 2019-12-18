@@ -1,0 +1,1 @@
+wine $1 $2 output.stl
