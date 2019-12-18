@@ -1,6 +1,3 @@
-ventricles:
-    class: File
-    path: ventricles.exe
 input-file:
     class: File
     path: inputFile.txt
