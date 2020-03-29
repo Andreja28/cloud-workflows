@@ -5,7 +5,7 @@ baseCommand: []
 requirements:
   - class: DockerRequirement
     dockerPull: andra28/pak
-
+  - class: InlineJavascriptRequirement
 inputs:
     dat:
         type: File
@@ -18,3 +18,4 @@ outputs:
             items: File
         outputBinding:
             glob: "*.VTK"
+            outputEval: ${ self.forEach(out => out.basename = out.basename.split(".")[0]+".vtk"); return self;}
