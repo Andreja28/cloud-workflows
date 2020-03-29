@@ -4,7 +4,7 @@ baseCommand: []
 
 requirements:
   - class: DockerRequirement
-    dockerPull: console-cad
+    dockerPull: andra28/console-cad
 
 inputs:
     input-file:

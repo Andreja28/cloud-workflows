@@ -4,7 +4,7 @@ baseCommand: []
 
 requirements:
   - class: DockerRequirement
-    dockerPull: pak
+    dockerPull: andra28/pak
 
 inputs:
     dat:
