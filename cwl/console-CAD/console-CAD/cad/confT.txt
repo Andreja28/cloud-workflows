@@ -1,0 +1,148 @@
+#T
+# General Properties
+# Continuum,Pipes,Convection,Diffusion,Dynamics,Homogenization,SolverType,HeatTransfer,LagrangeM,EyeModel,EyeAxiSym,CapDisj,AutoPresc,bForcePAKT,dForcePAKT,bImmune
+         1         0         0         1         0         0         1         0         0         1    0    0    0    0    0    0    0  1.000e+00    0
+# Fluid Properties
+ Domain Type: 0 = 2D, 1 = 3D, Groups, nGroups1D, etc...
+  1     1     1   0  1.000e+00   1   1   0  1.000e+00   1   0  1.000e+00   1   0  1.000e+00   1   0   0   0  1.000e+00  0  0
+  MaxArea, Conv. Mat. ID, Diff. Mat. ID
+   1.000e+00            1            1
+# Fluid Domain 3D, Direction, Div X, Y, Z, Length X, Y, Z, nDomain, Center X, Y, Z, Rot X, Y Z, bFromSTL, bUniform, nConvmat, bPipes, dMaxEA, nDiffMatID, bTumors, nTumors
+    0    1    1    1   1.00000e+00   1.00000e+00   1.00000e+00    3   5.00000e-01   5.00000e-01   5.00000e-01   0.00000e+00   0.00000e+00   0.00000e+00    0    0    1    0   1.00000e+01    1    0    1    0    0    0    0    1
+ nNumMolPresc 
+    1
+# bPrescrInl, bPrescrOut, SegTypeInl, SegTypeOut,dPrescrInl, dPrescrOut, nFuncInl, nFuncOut
+    0    0    1    1   0.00000e+00   0.00000e+00    1    1
+# bConceInl, bConceOut, dConceInl, dConceOut, nFuncInl, nFuncOut
+    0    0   0.00000e+00   0.00000e+00    1    1
+# bPrescrInlCap, bPrescrOutCap, SegTypeInlCap, SegTypeOutCap,dPrescrInlCap, dPrescrOutCap, nFuncInlCap, nFuncOutCap
+    0    0    1    1   1.00000e+00   0.00000e+00    1    1
+# bConceInlCap, bConceOutCap, dConceInlCap, dConceOutCap, nFuncInlCap, nFuncOutCap
+    0    0   1.00000e+00   0.00000e+00    1    1
+# Prescribed Values Electric Transport Capill
+ bPotCapIn, nFunIDPotCapIn, dPotCapIn, bPotCapOut, nFunIDPotCapOut, dPotCapOut, bCurrDCapIn, nFunIDCurrDCapIn, dCurrDCapIn, bCurrDCapOut, nFunIDCurrDCapOut, dCurrDCapOut
+    0     1    1.00000e+00     0     1    1.00000e+00     0     1    1.00000e+00     0     1    1.00000e+00
+# Prescribed Values Electric Transport EXE
+ bPotECMIn, nFunIDPotECMIn, dPotECMIn, bPotECMOut, nFunIDPotECMOut, dPotECMOut, bCurrDECMIn, nFunIDCurrDECMIn, dCurrDECMIn, bCurrDECMOut, nFunIDCurrDECMOut, dCurrDECMOut
+    1     1    1.00000e+00     0     1    1.00000e+00     0     1    1.00000e+00     0     1    1.00000e+00
+# Uniform layers data
+ -1.00e+02  0.00e+00  0.00e+00  0.00e+00  1.00e+00  0.00e+00  5.00e-02    3    0
+# AutoGen Data
+  AutoModelType,   AutoL0,   nAutoDiv,   bAutoRandom,   dAutoHmax,      bAutoContinuum,       bAutoUniform,  bAutoHomogeniz 
+    0    5.00000e+00     2     0    2.00000e-01     1     1     0    5.00000e+00     2
+  nAutoDirection,   bAutoPinn,   dAutoPinn,   bAutoPout,   dAutoPout,   bAutoCinn,  dAutoCinn,  bAutoCout, dAutoCout, bAutoVout, dAutoVout, bPrescInCont, bPrescWhole, bAutoCinnImm, dAutoCinnImm, bAutoCoutImm, dAutoCoutImm, bPrescInCapImm, bPrescInTissImm
+    0     0    1.00000e+00     0    0.00000e+00     1    1.00000e+00     1    0.00000e+00     0    1.00000e-01     1     0 3452816845     0    1.00000e+00     0    1.00000e+00     0     0
+  dAutoDiam,   dAutoVisc,   dAutoDiff,   dAutoPoros,   dAutoPerme,   dAutoLeak,  dAutoWallD,  dAutoWallThick, nAutoPipeDiv 
+   1.00000e+00    1.00000e-03    1.00000e+02    0.00000e+00    0.00000e+00    5.00000e-02    1.00000e+01    1.00000e-01     1
+  bAutoRandDiam,   dAutoRandDiam,   bAutoRandVisc,   dAutoRandVisc,   bAutoRandWallD,   dAutoRandWallD,  bAutoDiagonal,  dAutoDiamDiag 
+    0    1.00000e+01     0    1.00000e+01     0    1.00000e+01 3452816845    1.00000e-01 
+  bPipeGen,   bPipeGenY,   bGaussianD,   bPipeConn,   bContinDiv 
+  1   1   0   0   0   1   1   1.000000   1   0.000000   0   1.000000   0   0.000000   1   1
+# Smeared Data - bSmeared, nType, dVolF, dDiam, dThick, dDiffC, dPart, bPart, bGauss, bRandVF, dRandVF, bSmeTable
+    1    0   1.000e-02   1.000e-01   1.000e-02   1.000e+01   1.000e+00    0    0    0   2.000e+01    0
+# Capillary Smeared model Data - nSmearedInd, bSmeCapConv, dSmeCapVisc, dSmeTisDarcy, dSmeWallLeak, bSmeCapDiff, dSmeCapDiff, bSmeTissDiff, bSmeTissCon
+    5    0   1.000e-03   1.000e-01   5.000e-02    0   1.000e+02   1.000e+01    1    1
+# General Smeared Parameters
+# General Data - Indicators
+ # nDarcyCoeff,nViscPipe,nViscCapill,nHydrPipe,nHydrCapill,nDarcyTens
+    0    0    0    0    0    0
+# General Data - Values
+ # dDarcyCoeff,dViscPipe,dViscCapill,dHydrPipe,dHydrCapill
+  1.000000e+00  1.000000e-03  1.000000e-03  1.000000e+00  1.000000e+00
+# Data for capillary diameters
+ dCapDiamX,m_dCapDiamY, m_dCapDiamZ 
+  1.000000e+00  1.000000e+00  1.000000e+00
+# Molucules and Cells data
+ nMolNumber,nCellNumber
+    1    1
+# Molecule - Indicators
+# nIndPipe,nIndExt,nIndCap,nIndPartPipe,nIndPartCap,nIndAdhePipe,nIndAdheCap,nIndWallPipe,nIndWallCap,nIndWallCap,nIndMolType
+    1    1    1    0    0    0    0    0    1    0
+# Molecule - Values
+# sMolName,dDiffPipe,dDiffExt,dDiffCapX,dDiffCapY,dPartPipe,dPartCap,dAdhePipe,dAdheCap,dDeAdhePipe,dDeAdheCap,dWallPipe,dWallCap,dInitConcPipe,dInitConcExt,dMolarMass
+Mol1  1.000000e+02  1.000000e+02  1.000000e+02  1.000000e+02  1.000000e+00  1.000000e+00  1.000000e+00  1.000000e+00  1.000000e+00  1.000000e+00  1.000000e+02  1.000000e+02    0  1.000000e+00    0  1.000000e+00  1.000000e+00  1.000000e+02  1.000000e+00  1.000000e+00  1.000000e+00
+# Cells Params data
+ nCellParamNumber
+    1
+# Cell Params - Values
+# nIndDiffCell,dDiffCell,nIndPartCell,dPartCell,nIndActiveCell,dActiveInCell,dActiveOutCell,nIndSourceCell,dSourceCell,nIndAdhesCell,dAAdhesCell,dDeAdhesCell,nIndWallCell,dWallCell,bInitConcCell,dInitConcCell,nIndCritCell,dCritCell,nVesicles
+    1  1.000000e+02    0  1.000000e+00    0  1.000000e+00  1.000000e+00    0  1.000000e+00    0  1.000000e+00  1.000000e+00    1  1.000000e+02    0  1.000000e+00    0  1.000000e+00    1
+# Vesicle Parameters
+  1.000000e+02    0  1.000000e+00  1.000000e+02
+# Smeared Cell Data
+ nSmeCells
+    1
+# sCellName,nMigration,dVelMigration,dVolFraction,dDiameter,bCellInterior,bImmSourceCell,nFunIDActCell,nFunIDDecCell,nVesicles
+Cell1    0  1.000000e+00  1.000000e-01  1.000000e+00    0   1   0
+# sVesicleName, dVolFract, dDiameter, dAreaCoeff
+Vesicle1  1.000000e-01  1.000000e-02  0.000000e+00
+# Lymphatic System Data
+# bLymDiff, bLymConv,dLymVolFract,dLymVesDiam,dLymHydrCoef,dLymDarTenXX,dLymDarTenYY,dLymDarTenXY,bLymPrescAll,dLymPrescAll
+    0    0  1.000000e-02  1.000000e-01  1.000000e+00  1.000000e+00  1.000000e+00  1.000000e+00    0  0.000000e+00
+# Tissue Cells, Capillaries and Neurons
+ numCells, numCapillaries, bCells, bCapillaries
+    1    1    0    0
+# nID,     dX, dY, dZ, ElipseA, ElipseB, ElipseC, AngleX,AngleY,AngleZ,Div,DiffMat,dMaxArea,bInter,b1DMembr,nDifMat1D
+    1   2.00000e+00   2.00000e+00   2.00000e+00   1.00000e+00   1.00000e+00   1.00000e+00   0.00000e+00   0.00000e+00   0.00000e+00    2    1   1.00000e+00    1    0    1  0
+  bPartOut, dPartOut, bPartInn, dPartInn, RandX, RandY, RandZ, RandEA, RandEB, RandEC, RandAnX, RandAnY, RandAnZ
+    1   2.00000e+00    0   1.00000e+00   0.00000e+00   0.00000e+00   0.00000e+00   0.00000e+00   0.00000e+00   0.00000e+00   0.00000e+00   0.00000e+00   0.00000e+00    0
+# nID,     dX,             dY,       ElipseA,       ElipseB,      Angle,    Div, bWall, dThick, dMaxEA, b1DColl, nFunID, bMulti, nMatID, nType
+    1   2.00000e+00   2.00000e+00   5.00000e-01   5.00000e-01   0.00000e+00   10    1   2.00000e-01   1.00000e+00    0    1  0  1  1  0
+  bPBloodW, dPBloodW, bPWallS, dPWallS, bPColECM, dPColECM, bPWallECM, dPWallECM,  RandX,      RandY,        RandEA,       RandEB,     RandAngle
+    0   1.00000e+00    0   1.00000e+00    0   1.00000e+00    0   1.00000e+00   0.00000e+00   0.00000e+00   0.00000e+00   0.00000e+00   0.00000e+00
+#Eye Model data
+ nEyeRegions
+    0
+#Countour data
+ nEyeContours
+    0
+# Prescribed Data
+ nPrescribed
+    0
+# Eye Mass Function
+ nFunPoints
+    2
+ dTime, dValue
+  0.00e+00  0.00e+00
+  1.00e+03  1.00e+00
+# General Ionic and Electric Data
+ bIonicTrans, bElectrField, bIndIonECS, bIndIonCap
+    1    2    1    1
+# dFaradConst, dTemperature, dGasConstant, dPHExSpace, dEPotCapill, dEPotExCell, dDielConstECS, dEPotPipe, dEPotCape, dSmallFibRv
+   9.64850e-01   3.10000e+02   8.31000e+00   5.00000e+00   0.00000e+00   0.00000e+00   1.00000e-01   0.00000e+00   0.00000e+00   1.00000e-03
+# Flags for electric flow
+ bIndPipee, bIndCapee, bIndExee, bIndCellee, bIndOrgee
+    1    0    1    1    0
+# dGAPipee, dGACapee, dGEXxx, dGEXyy, dGEXzz, dGMPipe, dGMCap, dCapaPipe, dCapaCap
+   1.00000e+05   1.00000e+05   1.00000e+00   1.00000e+00   1.00000e+00   1.00000e+02   1.00000e+02   1.00000e-01   1.00000e-01
+# bIndPipeDia, dPipeDiae, bIndCapDia, dCapDiae, bIndCapGa, bIndTissGa, dCondRatio
+    0   1.00000e-01    0   1.00000e-01    0    0   3.33000e-01
+# bIndIonK, bIndIonNa, bIndIonKPf, bIndIonNaPf, nLenUnits, dEPotEqK, dEPotEqNa, IndNoble, IndOhara,IOharaFull
+    0    0    0    0    1  -1.00000e+02   4.00000e+01    0    1
+# bIndIonNaO,bIndIonCa,bIndIonTo,bIndIonKr,bIndIonKs,bIndIonK1,bIndIonNaCa,bIndIonNaK,bIndIonNab,bIndIonCab,bIndIonKb,bIndIonPca,bIndIonTime
+    1    1    1    1    1    1    1    1    1    1    1    1    1    0    0    0
+# Molecule General Data
+ nMolecules
+    1
+# dValence ,dDissocConst, dAcidValue, dWaterContent, dSorptionKn, dSorptionKd, dConstGamaN, dConstGamaD, dApex, dApdex, bIndIonECS
+   4.00000e+00   1.00000e+00  -1.00000e+00   6.00000e-01   1.00000e-02   3.00000e-02   1.05000e+00   2.05000e+00   3.00000e-02   4.00000e-02    1
+# Cells Params data
+ nCellParamNumber
+    1
+# Cell Params - Values
+ #dApCell,dApdCell,nVesicles
+   1.00000e+00   1.00000e+00    1
+# Vesicle Parameters
+ # dApOrg, dApdOrg, bIndIonic
+   1.00000e+00   1.00000e+00    1
+# Cell Electric Parameters
+ nCells
+    1
+# Cell Electric Data
+ bIndIonic, bIndElectr, dEPotential, dPHValue, dDielecConst, dGCELLVx, dGCELLVy, dGCELLVz, dGMCELL, dCAPACELV, nVesicles, bIndIonicK, IndIonicNa, bEpotPresc, dEpotPresc, bCurrPresc, dCurrPresc
+    1    1   0.00000e+00   3.00000e+00   1.00000e-02   1.00000e+01   1.00000e+01   1.00000e+01   2.20000e+01   4.50000e+00    1    0    0    0   0.00000e+00    0   0.00000e+00
+# Vesicle Electric Data
+ bIndElectr, dEpotMem, dPHValue, dDielConst, dGORGVx, dGORGVy, dGORGVz, dGMORG, dCAPORGV
+    1   1.20000e+01   6.00000e+00   3.00000e-01   1.00000e+01   1.00000e+01   1.00000e+01   1.50000e+01   8.00000e+00    0   1.00000e+00
+# Heart Visualization Parameters (enabled) 
+    0

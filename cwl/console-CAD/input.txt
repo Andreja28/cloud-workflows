@@ -1,0 +1,36 @@
+#T
+Ventricles data
+Left Ventricle
+1
+Center x,y,z Aortic x,y,z Mitral x,y,z
+     0.000     0.000     0.000    -2.500     0.000     0.000     2.000     0.000     0.000
+Generate Full, Generate Lid, Radius1,Radius2, Height, ThickessX, ThicknessY, AorticH, AorticW, MitralH, MitralW, Mitral body height, MitralCoap
+1 0      5.000     5.000    10.000     0.500     0.300     0.600     0.600     1.100     1.000     0.100     0.200
+Division R, Division C, Division T
+4 4 1
+Right Ventricle
+0
+# Concentration Functions - Number of Functions
+    1
+ nFunID, NumPoint
+    1    2
+  0.00e+00  1.00e+00
+  1.00e+03  1.00e+00
+# Time Periods
+ numPer,NPrint,LstPrint,VelCapPrint,MaxIt,IGraph,IForce,dTolConv,dTolLam,VtkPrint
+    1    1    0    0   30    1    0  5.00e-02  1.00e-03    1
+         2  1.00e+00
+# Materials - InitConc, DiffMatNum, ConvMatNum, HeatMatNum
+  0.0000e+00    1    1    1
+ D(C) - Num. of pairs
+    1
+ Pairs - Concentration, Diff. coeff.
+   0.000e+00   1.000e+01
+ D(P) - Num. of pairs
+    1
+ Pairs - Pressure, Darcy coeff.
+   0.000e+00   1.000e+00
+ D(P) - Num. of pairs
+    1
+ Pairs - Temp, Density, SpecHeat, CondCoeff
+   0.000e+00   1.000e+00   2.000e+00   5.000e+00
