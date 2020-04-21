@@ -4,7 +4,7 @@ baseCommand: []
 
 requirements:
   - class: DockerRequirement
-    dockerImageId: pak-c
+    dockerPull: andra28/pak-c
 
 inputs:
     dat:

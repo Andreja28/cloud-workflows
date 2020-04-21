@@ -4,7 +4,7 @@ baseCommand: []
 
 requirements:
   - class: DockerRequirement
-    dockerImageId: stent
+    dockerPull: andra28/stent
 
 inputs:
     fajl:
