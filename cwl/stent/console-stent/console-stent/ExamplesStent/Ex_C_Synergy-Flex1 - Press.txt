@@ -1,0 +1,58 @@
+#C
+# Stent: MatID, Type, sName, IntInd, dIntStiff, IntIndOut, IntStiffOut, IntIndIn, IntStiffIn, bPrescr, bSupport, bDiscardCon
+    2    0        Synergy   -1    50.000   -1    50.000    1     0.900    0     0.821    1    1    1
+# CenterX, CenterY, CenterZ, RotX, RotY, RotZ, ScaleX, ScaleY, ScaleZ, bPresc, nPrFunID
+     0.000     0.000     0.000     0.000     0.000     0.000     1.000     1.000     1.000    1    2
+# 3D Domains 
+ ExampleType, nStentDomains
+    0    1
+# MatID, Model, sName, IntInd, dIntStiff, IntIndOut, IntStiffOut, IntIndIn, IntStiffIn
+    1    0           F_01    1     5.000    0     0.000    0
+# CenterX, CenterY, CenterZ, RotX, RotY, RotZ, ScaleX, ScaleY, ScaleZ
+     0.000     0.000     0.000     0.000     0.000     0.000     1.000     1.000     1.000
+# Time Periods and Data
+ numPer,NPrint,LstPrint,MaxIt,dTolConv,IATYP
+    1    1    0   30  8.00e-02    2
+       120  1.00e-02
+# Restart Data
+bRestart,RestPer,RestStep,NewCalc,RestFile,NewNodeStart,OldNodeStart,OldNodesNum,OldElemStart,NewElemStart,OldElemsNum,nAbsCordInd,FlexSModel,OffsetNodes,OffsetElems
+ 1    1   90 1    0         1         1         0         1         1         0 2 1         0         0         0
+# Number of Functions
+    3
+# nFunID, NumPoint
+    1    2
+  0.00e+00  1.00e+00
+  1.00e+02  1.00e+00
+# nFunID, NumPoint
+    2    3
+  0.00e+00  0.00e+00
+  9.00e-01  0.00e+00
+  1.90e+00 -1.00e+03
+# nFunID, NumPoint
+    3    2
+  0.00e+00  1.00e+00
+  1.00e+04  1.00e+00
+# Materials
+    5
+     ID, Type
+    1    0
+   Density,    Young's,    Poisson
+   0.000e+00   9.100e+03   0.000e+00
+     ID, Type
+    2    1
+   E,    ANI, TEQY0, CY, AN, EM, HS
+   9.100e+06   1.000e-01   1.700e+02   4.700e+02   4.000e-01   0.000e+00   0.000e+00
+     ID, Type
+    3    0
+   Density,    Young's,    Poisson
+   0.000e+00   9.100e+03   0.000e+00
+     ID, Type
+    4    0
+   Density,    Young's,    Poisson
+   0.000e+00   9.100e-05   2.900e-01
+     ID, Type
+    5    0
+   Density,    Young's,    Poisson
+   0.000e+00   9.100e+03   2.900e-01
+# PLLA Exp data
+    0

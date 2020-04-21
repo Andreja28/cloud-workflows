@@ -1,0 +1,69 @@
+#C
+# Stent: MatID, Type, sName, IntInd, dIntStiff, IntIndOut, IntStiffOut, IntIndIn, IntStiffIn, bPrescribed
+    2    0        Synergy   -1    50.000   -2    50.000    0     0.900    0     0.821    0    1    0
+# CenterX, CenterY, CenterZ, RotX, RotY, RotZ, ScaleX, ScaleY, ScaleZ
+     0.000     0.000     0.000     0.000     0.000     0.000     1.000     1.000     1.000    0    0
+# 3D Domains 
+ ExampleType, nStentDomains
+    9    2
+# MatID, Model, sName, IntInd, dIntStiff, IntIndOut, IntStiffOut, IntIndIn, IntStiffIn
+    1    9 CilindarSpolja    1    50.000    0     0.000    1
+# CenterX, CenterY, CenterZ, RotX, RotY, RotZ, ScaleX, ScaleY, ScaleZ
+     0.000     0.000     0.000     0.000     0.000     0.000     0.550     0.550     1.000
+# MatID, Model, sName, IntInd, dIntStiff, IntIndOut, IntStiffOut, IntIndIn, IntStiffIn
+    3    9 CilindarUnutra    2    50.000    0     0.000    1
+# CenterX, CenterY, CenterZ, RotX, RotY, RotZ, ScaleX, ScaleY, ScaleZ
+     0.000     0.000     0.000     0.000     0.000     0.000     0.800     0.800     1.000
+# Time Periods
+ numPer,NPrint,LstPrint,MaxIt,dTolConv
+    3    1    0   30  5.00e-02    0    0
+        50  1.00e-04
+        10  5.00e-04
+       110  1.00e-04
+# Restart Data
+bRestart,RestPer,RestStep,NewCalc,RestFile,NewNodeStart,OldNodeStart,OldNodesNum,OldElemStart,NewElemStart,OldElemsNum,nAbsCordInd,FlexSModel,OffsetNodes,OffsetElems
+ 0    1    1 0    0         0         0         0         0         0         0 0 0         0         0
+# Number of Functions
+    3
+# nFunID, NumPoint
+    1    5
+  0.00e+00  0.00e+00
+  5.00e-03  1.05e+00
+  1.00e-02  0.00e+00
+  3.00e-02  0.00e+00
+  3.00e-02  0.00e+00
+# nFunID, NumPoint
+    2    5
+  0.00e+00  0.00e+00
+  1.00e-02  0.00e+00
+  2.00e-02 -9.55e-01
+  2.10e-02 -1.07e+00
+  2.20e-02 -1.07e+00
+# nFunID, NumPoint
+    3    2
+  0.00e+00  0.00e+00
+  1.00e+00  1.00e+00
+# Materials
+    5
+     ID, Type
+    1    0
+   Density,    Young's,    Poisson
+   0.000e+00   9.100e+03   0.000e+00
+     ID, Type
+    2    1
+   E,    ANI, TEQY0, CY, AN, EM, HS
+   9.100e+03   3.300e-01   1.700e+02   4.700e+02   4.000e-01   0.000e+00   0.000e+00
+     ID, Type
+    3    0
+   Density,    Young's,    Poisson
+   0.000e+00   9.100e+03   0.000e+00
+     ID, Type
+    4    0
+   Density,    Young's,    Poisson
+   0.000e+00   9.100e-05   2.900e-01
+     ID, Type
+    5    0
+   Density,    Young's,    Poisson
+   0.000e+00   9.100e-05   2.900e-01
+# PLLA Exp data
+    0
