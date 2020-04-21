@@ -1,4 +1,4 @@
-I have provided an example of `.yaml` file from the stent-cwl template in the attachment.
+I have provided an example of `.yaml` file from the `stent-cwl` template in the attachment.
 Also I have provided a `.zip` file containing all the input files to the workflow
 
 Here is the short overview ( `stent-cwl` template ):
