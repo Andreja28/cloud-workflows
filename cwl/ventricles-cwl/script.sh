@@ -1,1 +1,1 @@
-wine $1 $2 output.stl
+wine $1 $2 output.stl volume.txt
