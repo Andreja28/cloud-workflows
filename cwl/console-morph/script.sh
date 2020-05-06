@@ -1,3 +1,6 @@
-wine $1 $2
 
-cp /morph/IGLEXE/result1.stl /morph/output.stl
+cp -r /morph/* .
+
+wine console-morph.exe $1
+
+cp IGLEXE/result1.stl output.stl

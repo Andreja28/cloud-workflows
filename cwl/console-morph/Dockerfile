@@ -10,4 +10,4 @@ WORKDIR /morph
 COPY script.sh /morph/
 COPY console-morph/ /morph/
 
-ENTRYPOINT [ "bash", "/morph/script.sh", "/morph/console-morph.exe" ]
+ENTRYPOINT [ "bash", "/morph/script.sh"]
