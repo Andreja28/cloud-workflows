@@ -1,0 +1,6 @@
+# deform wall, septum, bottom (0 - no, 1 - yes)
+1 1 1
+# intesity of deformation: wall, septum, bottom 
+5.0 5.0 -10.0
+# constrain zones // 0 - let software decide 1 - user defined // zones: top, left ventricle, right ventricle, heart wall // 0 - unconstrained 1 - constrained
+0 0 0 0 0 
