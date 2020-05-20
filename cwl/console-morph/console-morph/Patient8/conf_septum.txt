@@ -1,0 +1,6 @@
+# nsteps
+1
+# deformation points: coords, vector
+23.392 -174.637 -167.037 -.8616 -.5073 .0182
+# constrained points 
+# constrained zones (center radius)
