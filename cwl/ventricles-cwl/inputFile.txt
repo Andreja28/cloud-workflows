@@ -5,7 +5,7 @@ Center x,y,z
 Radius1,Radius2, Height, ThickessX, ThicknessY
 5.000     5.000     10.000     0.500     0.300     
 Division R, Division C, Division T
-6 6 1
+4 4 1
 Right Ventricle
 1
 Center x,z
@@ -13,4 +13,4 @@ Center x,z
 Radius1,Radius2, Height, ThickessX, ThicknessY,  
 5.000     5.000    9.000     0.500     0.300
 Division R, Division C
-6 6
+4 4

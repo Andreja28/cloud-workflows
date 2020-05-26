@@ -4,7 +4,7 @@ baseCommand: []
 
 requirements:
   - class: DockerRequirement
-    dockerPull: andra28/ventricles:latest
+    dockerImageId: ventricles
 
 inputs:
     input-file:
@@ -12,7 +12,11 @@ inputs:
         inputBinding:
             position: 1
 outputs:
-    res:
+    stl:
         type: File
         outputBinding:
             glob: output.stl
+    volume:
+        type: File
+        outputBinding:
+            glob: volume.txt
