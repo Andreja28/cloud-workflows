@@ -4,7 +4,7 @@ baseCommand: []
 
 requirements:
   - class: DockerRequirement
-    dockerImageId: ventricles
+    dockerPull: andra28/ventricles
 
 inputs:
     input-file:
