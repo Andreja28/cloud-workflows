@@ -1,0 +1,3 @@
+input-file:
+    class: File
+    path: inputSF-example1.txt
