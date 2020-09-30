@@ -4,7 +4,7 @@ baseCommand: []
 
 requirements:
   - class: DockerRequirement
-    dockerPull: andra28/pak-fs
+    dockerImageId: pak:fs
   - class: InlineJavascriptRequirement
 inputs:
     dat:
@@ -21,12 +21,17 @@ outputs:
             type: array
             items: File
         outputBinding:
-            glob: "*.VTK"
-            outputEval: ${ self.forEach(out => out.basename = out.basename.split(".")[0]+".vtk"); return self;}
-    unv:
+            glob: "*.vtk"
+    unvs:
         type:
             type: array
             items: File
         outputBinding:
             glob: "*.UNV"
             outputEval: ${ self.forEach(out => out.basename = out.basename.split(".")[0]+".unv"); return self;}
+    unv:
+        type:
+            type: array
+            items: File
+        outputBinding:
+            glob: "*.unv"
