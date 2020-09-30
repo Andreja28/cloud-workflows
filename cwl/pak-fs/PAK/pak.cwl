@@ -4,7 +4,7 @@ baseCommand: []
 
 requirements:
   - class: DockerRequirement
-    dockerImageId: pak:fs
+    dockerPull: andra28/pak-fs
   - class: InlineJavascriptRequirement
 inputs:
     dat:
