@@ -9,16 +9,6 @@ outputs:
         type: array
         items: File
     outputSource: pak/vtk
-  unv:
-    type: 
-        type: array
-        items: File
-    outputSource: pak/unv
-  unvs:
-    type: 
-        type: array
-        items: File
-    outputSource: pak/unvs
 
 steps:
   console-cad:
@@ -32,4 +22,4 @@ steps:
     in:
       dat: console-cad/dat
       solverVersion: console-cad/solverVersion
-    out: [vtk, unvs, unv]
+    out: [vtk]
