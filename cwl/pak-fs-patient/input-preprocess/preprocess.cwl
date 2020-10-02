@@ -4,7 +4,7 @@ baseCommand: []
 
 requirements:
   - class: DockerRequirement
-    dockerImageId: andra28/pak-fs:preprocess
+    dockerPull: andra28/pak-fs:preprocess
 
 inputs:
     input-file: 
