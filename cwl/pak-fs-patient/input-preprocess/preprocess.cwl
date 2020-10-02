@@ -4,7 +4,7 @@ baseCommand: []
 
 requirements:
   - class: DockerRequirement
-    dockerPull: andra28/pak-fs:preprocess
+    dockerPull: andra28/pak-fs:patient-preprocess
 
 inputs:
     input-file: 
