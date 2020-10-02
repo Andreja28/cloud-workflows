@@ -1,0 +1,31 @@
+C a) data about function in a table form (2I5)
+C IBR,IMAX    (IMAX.LE.MAXTFT)
+    1   11
+C b) values for argument - function (2F10.0)
+ 0.000e+0  10.00e-1 
+ 0.100e+0  20.00e-1 
+ 0.200e+0  40.00e-1 
+ 0.300e+0  80.00e-1 
+ 0.400e+0  60.00e-1 
+ 0.500e+0  40.00e-1 
+ 0.600e+0  0.0e-00 
+ 0.700e+0  0.0e-00 
+ 0.800e+0  0.0E-00 
+ 0.900e+0  0.0e-00
+ 1.001e+0  0.00e-0
+C /14-1/ TIME FUNCTIONS   (IBR=1,NTABFT)
+C a) data about function in a table form (2I5)
+C IBR,IMAX    (IMAX.LE.MAXTFT)
+    2   11
+C b) values for argument - function (2F10.0)
+ 0.000e+0 0.000e-00 
+ 0.100e+0 0.000e-00 
+ 0.200e+0 0.00e-00 
+ 0.300e+0 0.00e-00 
+ 0.400e+0 0.00e-00 
+ 0.500e+0 0.00e-00 
+ 0.600e+0 0.500e+01 
+ 0.700e+0 1.000e+01
+ 0.800e+0 1.000e+01 
+ 0.900e+0 1.000e+01
+ 1.001e+0 0.500e+01
