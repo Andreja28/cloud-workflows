@@ -1,0 +1,6 @@
+dat:
+    class: File
+    path: ../output/pak.dat
+solverVersion:
+    class: File
+    path: ../output/solver_version.txt
