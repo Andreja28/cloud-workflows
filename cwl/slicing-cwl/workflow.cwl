@@ -4,7 +4,7 @@ baseCommand: []
 
 requirements:
   - class: DockerRequirement
-    dockerImageId: slicer
+    dockerPull: andra28/slicer
 
 inputs:
     txt:
