@@ -1,0 +1,2 @@
+# Clipping direction (Cx,Cy,Cz), number of slices 
+1.0 0.0 0.0 3

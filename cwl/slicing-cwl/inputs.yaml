@@ -1,0 +1,6 @@
+vtks: [
+    { class: File, path: test.vtk}
+]
+txt:
+    class: File
+    path: input.txt
