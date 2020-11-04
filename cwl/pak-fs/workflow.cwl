@@ -9,17 +9,20 @@ outputs:
         type: array
         items: File
     outputSource: pak/vtk
+  csv:
+    type: File
+    outputSource: pak/csv
 
 steps:
   console-cad:
     run: cad/console-CAD.cwl
     in:
       input-file: input-file
-    out: [dat,solverVersion]
+    out: [dat, solverVersion]
 
   pak:
     run: PAK/pak.cwl
     in:
       dat: console-cad/dat
       solverVersion: console-cad/solverVersion
-    out: [vtk]
+    out: [vtk,csv]
