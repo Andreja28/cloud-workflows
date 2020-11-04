@@ -1,0 +1,3 @@
+ohara-input:
+    class: File
+    path: OHaraInput.txt
