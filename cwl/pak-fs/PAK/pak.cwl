@@ -35,3 +35,7 @@ outputs:
             items: File
         outputBinding:
             glob: "*.unv"
+    csv:
+        type: File
+        outputBinding:
+            glob: "pvDiagram.csv"
