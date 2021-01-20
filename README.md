@@ -15,7 +15,7 @@ A job using pak runner service has several steps:
 The workflow is run with the following command:
 
 ```
-python main.py file:my-file-store
+python3 main.py file:my-file-store
 ```
 
 ## toil/another-cwl
