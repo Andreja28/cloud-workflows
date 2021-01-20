@@ -1,0 +1,125 @@
+#T
+# General Properties
+Ventricles data
+Left Ventricle
+1 0
+Radius1,Radius2, Height, ThickessX, ThicknessY 
+5.000     5.000    10.000     0.500     0.300    
+Division R, Division C, Division T
+4 4 1
+Right Ventricle
+0
+# Prescribed Values Electric Transport EXE
+ bPotECMIn, nFunIDPotECMIn, dPotECMIn, bPotECMOut, nFunIDPotECMOut, dPotECMOut, 
+    1     2    9.50000e-01     0     1    1.00000e+00     
+# Concentration Functions - Number of Functions
+    2
+ nFunID, NumPoint
+    1    2
+  0.00e+00  1.00e+00
+  1.00e+03  1.00e+00
+ nFunID, NumPoint
+    2   80
+  0.00e+00 -7.50e+01
+  5.68e-02 -7.37e+01
+  1.23e-01 -7.21e+01
+  1.80e-01 -7.08e+01
+  2.19e-01 -6.93e+01
+  2.56e-01 -6.77e+01
+  2.89e-01 -6.55e+01
+  3.13e-01 -6.36e+01
+  3.30e-01 -6.01e+01
+  3.38e-01 -5.61e+01
+  3.38e-01 -4.71e+01
+  3.38e-01 -3.65e+01
+  3.38e-01 -2.55e+01
+  3.38e-01 -1.43e+01
+  3.38e-01 -2.73e-01
+  3.38e-01  2.50e+01
+  3.60e-01  7.42e+00
+  3.67e-01  4.12e+00
+  3.85e-01  1.92e+00
+  4.12e-01 -2.73e-01
+  4.44e-01 -2.47e+00
+  4.81e-01 -4.67e+00
+  5.13e-01 -7.31e+00
+  5.47e-01 -1.02e+01
+  5.84e-01 -1.43e+01
+  6.09e-01 -1.83e+01
+  6.31e-01 -2.27e+01
+  6.46e-01 -2.91e+01
+  6.56e-01 -3.59e+01
+  6.63e-01 -4.25e+01
+  6.71e-01 -5.02e+01
+  6.78e-01 -5.76e+01
+  6.88e-01 -6.53e+01
+  7.00e-01 -7.08e+01
+  7.13e-01 -7.37e+01
+  7.30e-01 -7.50e+01
+  7.55e-01 -7.54e+01
+  7.94e-01 -7.46e+01
+  8.58e-01 -7.33e+01
+  9.20e-01 -7.24e+01
+  9.94e-01 -7.10e+01
+  1.07e+00 -6.95e+01
+  1.12e+00 -6.75e+01
+  1.16e+00 -6.44e+01
+  1.18e+00 -6.01e+01
+  1.19e+00 -5.61e+01
+  1.19e+00 -4.71e+01
+  1.19e+00 -3.65e+01
+  1.19e+00 -2.55e+01
+  1.19e+00 -1.43e+01
+  1.19e+00 -2.73e-01
+  1.19e+00  2.50e+01
+  1.20e+00  7.42e+00
+  1.21e+00  4.12e+00
+  1.23e+00  1.92e+00
+  1.26e+00 -2.73e-01
+  1.29e+00 -2.47e+00
+  1.33e+00 -4.67e+00
+  1.36e+00 -7.31e+00
+  1.39e+00 -1.02e+01
+  1.42e+00 -1.39e+01
+  1.46e+00 -1.81e+01
+  1.48e+00 -2.31e+01
+  1.50e+00 -2.86e+01
+  1.51e+00 -3.54e+01
+  1.52e+00 -4.27e+01
+  1.52e+00 -4.95e+01
+  1.53e+00 -5.65e+01
+  1.54e+00 -6.31e+01
+  1.55e+00 -6.93e+01
+  1.56e+00 -7.26e+01
+  1.57e+00 -7.50e+01
+  1.58e+00 -7.61e+01
+  1.61e+00 -7.61e+01
+  1.68e+00 -7.46e+01
+  1.75e+00 -7.32e+01
+  1.83e+00 -7.19e+01
+  1.90e+00 -7.06e+01
+  1.95e+00 -6.91e+01
+  2.00e+00 -6.81e+01
+# Time Periods
+ numPer,MaxIt,dTolConv
+    1    30    5.00e-02  
+        39  5.00e-02
+# Smeared Data - bSmeared
+    1         
+# General Ionic and Electric Data
+  bElectrField
+    4
+# Flags for electric flow
+ bIndExee
+    1   
+# dGEXxx, dGEXyy, dGEXzz 
+   0.20000e+00   0.20000e+00   0.20000e+00   
+# IndOhara
+    1    
+# bIndIonNaO,bIndIonCa,bIndIonTo,bIndIonKr,bIndIonKs,bIndIonK1,bIndIonNaCa,bIndIonNaK,bIndIonNab,bIndIonCab,bIndIonKb,bIndIonPca,bIndIonTime
+    1    1    1    1    1    1    1    1    1    1    1    1    1    0    0    0
+# Cell Electric Parameters
+# Cell Electric Data
+ bEpotPresc, dEpotPresc
+  1   -20.000e+00     
+

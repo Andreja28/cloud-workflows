@@ -1,5 +1,6 @@
 cwlVersion: v1.0
 class: Workflow
+
 inputs:
   input-file: File
 
