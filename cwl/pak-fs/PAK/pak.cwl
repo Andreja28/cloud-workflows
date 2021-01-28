@@ -22,19 +22,6 @@ outputs:
             items: File
         outputBinding:
             glob: "*.vtk"
-    unvs:
-        type:
-            type: array
-            items: File
-        outputBinding:
-            glob: "*.UNV"
-            outputEval: ${ self.forEach(out => out.basename = out.basename.split(".")[0]+".unv"); return self;}
-    unv:
-        type:
-            type: array
-            items: File
-        outputBinding:
-            glob: "*.unv"
     csv:
         type: File
         outputBinding:
