@@ -1,0 +1,6 @@
+input-file:
+  class: File
+  path: input.txt
+Ca:
+  class: File
+  path: Ca.dat

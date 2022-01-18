@@ -1,0 +1,13 @@
+#Holz scale factor 
+1.0
+# Fluid Velocity Function 
+ 4
+ 0.00000e+00 1.00000e+00
+ 5.03000e-01 1.00000e+00
+ 5.05000e-01 0.00000e+00
+ 1.01000e+00 0.00000e+00
+# LV Param Model 
+dBaseDiameter, dLenOfBase, dFluidBottomRadius, nBaseDivision, dDiamAorta, dLenAorta, nAortaDivision, dDiamMitral, dLenMitral, nMitralDivision, LenAtrium, nAtriumDiv
+     5.7000e+01     4.5600e+01     1.5000e+01    6     3.0400e+01     1.9000e+01   10     1.7100e+01     1.9000e+01    8     1.9000e+01    3
+dDistAortmiddle, dDiamStartAort, dDiamEndAort, dAnglAortBase, dAnglMitralBase, nDivArteries, bSolidWall, dSolidWThick, dBotBaseRad, dLenBotBase, nDivBotBase
+     1.0000e-01     8.0000e-01     8.0000e-01     1.5000e+01     1.5000e+01    5    1     7.6000e+00    1     1.0000e+01     6.0000e+00    1

@@ -1,0 +1,14 @@
+C PointsNum,MaxElemVol,TetGenParams,nAtrib,IndMov,MDMaxVolume,MDomDiv,MDOnly,MDDivF,MDPrescP
+    0    1.000000e+00      0     0    1.000000e+00     1     0     0     0     0     0 
+C Number of facets
+    0
+C  Size  Node 1  ......Node N Marker
+C Prescribed Values(Inlet, Outlet)
+       0        0        2        2         2        2
+C Inlet Velocity
+C     Vx,           Vy,            Vz,    indVx,indVy,indVz, FunID (3E18.9, 4I5)
+   1.000000000e+00   0.000000000e+00   0.000000000e+00    1    0    0    3
+C Outlet Velocity
+C     Vx,           Vy,            Vz,    indVx,indVy,indVz, FunID(3E18.9, 4I5)
+   1.000000000e+00   0.000000000e+00   0.000000000e+00    1    0    0    4
+C Region List
