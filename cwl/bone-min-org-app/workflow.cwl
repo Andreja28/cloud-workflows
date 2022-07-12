@@ -1,24 +1,20 @@
-#!/usr/bin/env cwl-runner
-
 cwlVersion: v1.0
-class: CommandLineTool
-baseCommand: ["/home/milos/install/MATLAB/MATLAB_Production_Server/R2015a/bin/matlab", "-nodesktop", "-nosplash", "-r", "run BoneMinOrgAPP.m;", "quit;"]
+class: Workflow
 
-requirements:
-  InitialWorkDirRequirement:
-    listing:
-      - $(inputs.input)
-      - $(inputs.source)
 inputs:
-  input:
-    type: File
-  source:
-    type: File[]
+  input-file: File
+  source: File[]
+
 outputs:
   pngs:
-    type:
-      type: array
-      items: File
-    outputBinding:
-      glob: "*.png"
+    type: 
+        type: array
+        items: File
+    outputSource: min-org/pngs
 
+steps:
+  min-org:
+    run: min-org.cwl
+    in:
+      dat: input-file
+    out: [pngs]

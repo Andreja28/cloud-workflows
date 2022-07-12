@@ -1,45 +1,36 @@
-#!/usr/bin/env cwl-runner
-
 cwlVersion: v1.0
-class: CommandLineTool
-baseCommand: ["/bin/bash", "start_script.sh"]
+class: Workflow
 
-requirements:
-  InitialWorkDirRequirement:
-    listing:
-      - $(inputs.source)
 inputs:
-  zz:
-    type: float
-    inputBinding:
-      position: 1
-  nz:
-    type: float
-    inputBinding:
-      position: 2
-  vf2:
-    type: float
-    inputBinding:
-      position: 3
-  sz:
-    type: float
-    inputBinding:
-      position: 4
-  tz:
-    type: float
-    inputBinding:
-      position: 5
-  Emax:
-    type: float
-    inputBinding:
-      position: 6
-  source:
-    type: File[]
+  zz: float
+  nz: float
+  vf2: float
+  sz: float
+  tz: float
+  Emax: float
+  source: File[]
+
 outputs:
   pngs:
-    type:
-      type: array
-      items: File
-    outputBinding:
-      glob: "*.csv"
+    type: 
+        type: array
+        items: File
+    outputSource: baghdadite/pngs
+  csv:
+    type: 
+        type: array
+        items: File
+    outputSource: baghdadite/csv
 
+steps:
+  baghdadite:
+    run: baghdadite.cwl
+    in:
+        zz: zz
+        nz: nz
+        vf2: vf2
+        sz: sz
+        tz: tz
+        Emax: Emax
+        source: source
+    out: [pngs,csv]
