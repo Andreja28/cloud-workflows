@@ -16,5 +16,6 @@ steps:
   min-org:
     run: min-org.cwl
     in:
-      dat: input-file
+      input: input-file
+      source: source
     out: [pngs]

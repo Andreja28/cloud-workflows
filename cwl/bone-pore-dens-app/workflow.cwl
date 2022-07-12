@@ -16,5 +16,6 @@ steps:
   pore-dens:
     run: pore-dens.cwl
     in:
-      dat: input-file
+      input: input-file
+      source: source
     out: [pngs]

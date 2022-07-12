@@ -9,10 +9,10 @@ outputs:
     type: 
         type: array
         items: File
-    outputSource: pak/vtk
+    outputSource: pak-athero/vtk
 
 steps:
-  pak:
+  pak-athero:
     run: pak-athero.cwl
     in:
       dat: input-file
