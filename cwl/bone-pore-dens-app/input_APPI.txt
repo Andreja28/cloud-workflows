@@ -1,0 +1,2 @@
+5 # number of values for different lacunar porosities
+30 # resolution of contourplots

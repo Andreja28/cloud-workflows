@@ -1,0 +1,1 @@
+/home/andra/install/MATLAB/MATLAB_Production_Server/R2015a/bin/matlab -nodisplay -r "zz=$1;nz=$2;vf2=$3;sz=$4;tz=$5;Emax=$6;MAIN;"

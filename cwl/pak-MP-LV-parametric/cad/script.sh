@@ -1,6 +1,7 @@
 cp -r /pak/* .
 cp $1 .
 cp $2 .
+mkdir output
 ls 
 wine consoleCAD.exe $1
 ls

@@ -1,0 +1,23 @@
+input:
+   class: File
+   path: input_APPII.txt
+source: [
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-min-org-app/BoneMinOrgAPP.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-min-org-app/P_iso_cyl.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-min-org-app/P_iso_sph.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-min-org-app/P_isotrans_cyl.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-min-org-app/P_isotrans_sph.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-min-org-app/compress.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-min-org-app/expand.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-min-org-app/fun_Psph_1111.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-min-org-app/fun_Psph_1122.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-min-org-app/fun_Psph_1133.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-min-org-app/fun_Psph_2323.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-min-org-app/fun_Psph_3333.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-min-org-app/hom_excel_to_macro.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-min-org-app/hom_wetcol_to_excel.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-min-org-app/hom_wetcol_to_excel_APPDENS.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-min-org-app/leblond.mat},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-min-org-app/rot2.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-min-org-app/rot2retour.m}
+]

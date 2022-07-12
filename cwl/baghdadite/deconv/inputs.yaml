@@ -1,0 +1,16 @@
+zz: 1
+nz: 5
+vf2: 0.5
+sz: 2
+tz: 2
+Emax: 200
+source: [
+   { class: File, path: /home/milos/cloud-workflows/cwl/bagdadite/constrain26.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bagdadite/curvsuh1.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bagdadite/curvsuh2.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bagdadite/curvsum1.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bagdadite/curvsum2.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bagdadite/MAIN.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bagdadite/Nanoindentation_data.txt},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bagdadite/start_script.sh}
+]

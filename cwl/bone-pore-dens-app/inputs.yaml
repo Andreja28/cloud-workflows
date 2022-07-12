@@ -1,0 +1,23 @@
+input:
+   class: File
+   path: input_APPI.txt
+source: [
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-pore-dens-app/BonePoreDensAPP.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-pore-dens-app/P_iso_cyl.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-pore-dens-app/P_iso_sph.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-pore-dens-app/P_isotrans_cyl.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-pore-dens-app/P_isotrans_sph.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-pore-dens-app/compress.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-pore-dens-app/expand.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-pore-dens-app/fun_Psph_1111.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-pore-dens-app/fun_Psph_1122.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-pore-dens-app/fun_Psph_1133.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-pore-dens-app/fun_Psph_2323.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-pore-dens-app/fun_Psph_3333.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-pore-dens-app/hom_excel_to_macro.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-pore-dens-app/hom_wetcol_to_excel.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-pore-dens-app/hom_wetcol_to_excel_APPDENS.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-pore-dens-app/leblond.mat},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-pore-dens-app/rot2.m},
+   { class: File, path: /home/milos/cloud-workflows/cwl/bone-pore-dens-app/rot2retour.m}
+]
