@@ -21,7 +21,7 @@ steps:
     run: asli.cwl
     in:
       stl: stl
-      yml: yaml
+      yml: yml
       sap: sap
       tap: tap
       fap: fap
