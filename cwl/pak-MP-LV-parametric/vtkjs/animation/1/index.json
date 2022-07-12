@@ -1,0 +1,14 @@
+{
+  "version": 1.0,
+  "background": [0.960784, 0.870588, 0.701961],
+  "camera": {
+    "focalPoint": [0, 0, 0],
+    "position": [0, 0, 1],
+    "viewUp": [0, 1, 0]
+  },
+  "centerOfRotation": [0, 0, 0],
+  "scene": [
+  ],
+  "lookupTables": {
+  }
+}
